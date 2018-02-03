@@ -2101,6 +2101,16 @@ section .container {
 	.main-navigation ul ul a {
 		color: #777;
 	}
+	
+	.main-navigation li.SocialMenu{
+		left: 46%;
+	}
+}
+
+@media (max-width: 499px) {
+	.main-navigation li.SocialMenu{
+		left: 42%;
+	}
 }
 
 .main-navigation li.SocialMenuFacebook a {
@@ -2263,7 +2273,13 @@ section .container {
 	height: 20px;
 }
 
-GrupoEscolaConteudo .employee {
+#GrupoEscolaConteudo .widget-title{
+	display: block;
+	font-size: 14px;
+}
+
+
+#GrupoEscolaConteudo .employee {
 	padding: 10px;
 }
 
@@ -2283,6 +2299,11 @@ GrupoEscolaConteudo .employee {
 
 #GrupoEscolaConteudo .employees-area .employee{
 	/* margin-top: -40px; */
+	max-width : 180px;
+}
+
+#GrupoEscolaConteudo .employees-area .employee-desc{
+	text-align: center;
 }
 
 @media (min-width: 992px) {
@@ -2316,6 +2337,15 @@ GrupoEscolaConteudo .employee {
 	}
 }
 
+/* Companhia */
+@media (max-width: 499px) {
+	a.wpcf7-form-control.wpcf7-submit{
+		white-space: nowrap;
+		padding: 5px;
+	}
+}
+
+
 /* Parceiros */
 
 /* .ParceirosGaleria .envira-gallery-image{
@@ -2341,6 +2371,10 @@ GrupoEscolaConteudo .employee {
   .container {
     max-width: 1000px; /*1170*/
   }
+}
+
+.site-footer{
+	display:none;
 }
 
 /****** TEMPORÁRIO ****/
