@@ -1,0 +1,210 @@
+div.wpcf7 {
+	margin: 0;
+	padding: 0;
+}
+
+div.wpcf7-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+}
+
+div.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+div.wpcf7-mail-sent-ok {
+	border: 2px solid #398f14;
+}
+
+div.wpcf7-mail-sent-ng {
+	border: 2px solid #ff0000;
+}
+
+div.wpcf7-spam-blocked {
+	border: 2px solid #ffa500;
+}
+
+div.wpcf7-validation-errors {
+	border: 2px solid #f7e700;
+}
+
+
+.wpcf7-form-control-wrap {
+	position: relative;
+}
+
+span.wpcf7-not-valid-tip {
+	color: #f00;
+	font-size: 1em;
+	font-weight: normal;
+	display: block;
+}
+
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 100;
+	border: 1px solid #ff0000;
+	background: #fff;
+	padding: .2em .8em;
+}
+
+span.wpcf7-list-item {
+	display: inline-block;
+	margin: 0 0 0 1em;
+}
+
+span.wpcf7-list-item-label::before,
+span.wpcf7-list-item-label::after {
+	content: " ";
+}
+
+.wpcf7-display-none {
+	display: none;
+}
+
+div.wpcf7 .ajax-loader {
+	visibility: hidden;
+	display: inline-block;
+	background-image: url('../../images/ajax-loader.gif');
+	width: 16px;
+	height: 16px;
+	border: none;
+	padding: 0;
+	margin: 0 0 0 4px;
+	vertical-align: middle;
+}
+
+div.wpcf7 .ajax-loader.is-active {
+	visibility: visible;
+}
+
+div.wpcf7 div.ajax-error {
+	display: none;
+}
+
+div.wpcf7 .placeheld {
+	color: #888;
+}
+
+div.wpcf7 .wpcf7-recaptcha iframe {
+	margin-bottom: 0;
+}
+
+div.wpcf7 input[type="file"] {
+	cursor: pointer;
+}
+
+div.wpcf7 input[type="file"]:disabled {
+	cursor: default;
+}
+
+
+/******************************************/
+/***** Projeto BAC - Customizações ********/
+/******************************************/
+
+
+.wpcf7-form{
+	text-align: center;
+}
+
+.wpcf7-form > p,
+.wpcf7-form > p > label{
+	/* margin: 0; */
+	max-width: 100%;
+	margin-botom : 0px;
+}
+.wpcf7-form.column-one-half{
+    position: relative;
+    margin-right: 4%;
+    float: left;
+    margin-bottom: 20px;
+	width: 48%;
+	padding-left: 135px;
+	font-weight: bold;
+	
+}
+ 
+.wpcf7-form.column-last {
+    margin-right: 0 !important;
+    clear: right;
+	padding-left: 0;
+    padding-right: 60px;
+}
+ 
+@media only screen and (max-width: 767px) {
+    .wpcf7-form.column-one-half{
+        width: 100%;
+        margin-right: 0;
+		padding-left: 0;
+    }
+	.wpcf7-form.column-last{
+    padding-right: 0px;
+	}
+}
+
+
+.wpcf7-form-control-wrap > input,
+.wpcf7-form-control-wrap > textarea{
+	border: 0;
+	width:500px;
+	max-width: 100%;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    background-color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #DDD;
+    box-shadow: none;
+    border-radius: 0px;
+    border: 0;
+	max-width: 100%;
+	white-space: normal;
+}
+
+span.wpcf7-list-item {
+	margin: 0px;
+}
+
+.ContactPlaceHolder{
+	width: 500px;
+	height: 51px;
+	background-color: #fff;
+	padding-top: 15px;
+	text-align : left;
+		height: auto;
+}
+
+.ContactPlaceHolder > span:first-child{
+	display: block;
+	width: 100%;
+	margin-left: 15px;
+	color: gray;
+}
+	
+.ContactPlaceHolder span.wpcf7-list-item{
+	width: 100%;
+	text-align : left;
+	padding-left: 30px;
+}
+
+.wpcf7-list-item.last{
+	padding-bottom: 10px;
+}
+
+@media (min-width: 499px) {
+	.ContactPlaceHolder span.wpcf7-list-item{
+		width: 50%;
+	}
+}

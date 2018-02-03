@@ -1,0 +1,46 @@
+.ko-calendar-widget-loading {
+	height: 100px;
+	text-align: center;
+}
+
+.ko-calendar-date {
+	margin-top: 6px;
+	font-weight: bold;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: outside;
+	font-size: 16px;
+	color: rgb(169, 97, 121);
+}
+
+.ko-calendar-event-list {
+	margin: 4px 4px 20px 4px;
+	
+}
+
+.ko-calendar-entry-title{
+	font-weight: bold;
+}
+
+.ko-calendar-entry-date-row {
+	padding-top: 6px;
+}
+
+.ko-calendar-entry-date-label {
+	font-weight: bold;
+}
+
+.ko-calendar-entry-date-text {
+}
+
+.ko-calendar-entry-location-text {
+}
+
+.ko-calendar-entry-body {
+	margin: 0px;
+}
+
+/* Indent the paragraphs, but not by much */
+.ko-calendar-entry-body  p {
+	margin: 0px;
+}

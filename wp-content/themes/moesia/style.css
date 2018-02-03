@@ -2017,15 +2017,36 @@ section .container {
 
 /*Estilos Gerais*/
 
+@font-face {
+	font-family: "Raleway";
+	src: url("fonts/Raleway-Regular-Original.otf");
+	src: url("fonts/Raleway-Regular.ttf") format("woff");
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Raleway', sans-serif !important;
 	color: #000;
 	font-weight: bold;
+}
+
+body,
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.main-navigation li,
+.main-navigation ul ul li,
+.post-navigation .nav-previous,
+.post-navigation .nav-next,
+.paging-navigation .nav-previous,
+.paging-navigation .nav-next,
+.fact {
+	font-family: 'Raleway', sans-serif !important;
 }
 
 .site-branding {
@@ -2037,7 +2058,25 @@ input[type="submit"] {
     font-weight: normal;
 }
 
+.DuasColunas{
+	width: 50%; 
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.widget .container,
+section .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 /*Menus e Barra Superior*/
+
+.main-navigation li{
+	padding-top: 15px;
+	font-weight: bold;
+}
 
 .main-navigation li.SocialMenu{
 	padding: 0px;
@@ -2058,25 +2097,31 @@ input[type="submit"] {
     text-indent: -9000px;
 }
 
+@media screen and (max-width: 991px) {
+	.main-navigation ul ul a {
+		color: #777;
+	}
+}
+
 .main-navigation li.SocialMenuFacebook a {
-	background-image: url('https://image.flaticon.com/icons/png/512/124/124010.png');
+	background-image: url('/wp-content/img/social/facebook.png');
 }
 
 .main-navigation li.SocialMenuInstagram a {
-	background-image: url('https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png');
-}
-
-.main-navigation li.SocialMenuTwitter a {
-	background-image: url('http://markenect.com/wp-content/uploads/2017/06/twitter.png');
-}
-
-.main-navigation li.SocialMenuMedium a {
-	background-image: url('https://cdn-images-1.medium.com/max/1600/1*emiGsBgJu2KHWyjluhKXQw.png');
+	background-image: url('/wp-content/img/social/instagram.png');
 }
 
 .main-navigation li.SocialMenuYoutube a {
-	background-image: url('http://logok.org/wp-content/uploads/2014/08/Youtube-logo-2017-640x480.png');
+	background-image: url('/wp-content/img/social/youtube.png');
 }
+
+/* .main-navigation li.SocialMenuTwitter a {
+	background-image: url('http://markenect.com/wp-content/uploads/2017/06/twitter.png');
+} */
+
+/* .main-navigation li.SocialMenuMedium a {
+	background-image: url('https://cdn-images-1.medium.com/max/1600/1*emiGsBgJu2KHWyjluhKXQw.png');
+} */
 
 @media screen and (min-width: 992px) {
 	.sticky-wrapper {
@@ -2085,6 +2130,10 @@ input[type="submit"] {
 }
 
 /*Estilos para páginas paralelas*/
+
+.page-template-page_fullwidth-php .site-content{
+	margin-top: 0px;
+}
 
 .entry-header{
 	margin-bottom: 0px;
@@ -2114,11 +2163,6 @@ input[type="submit"] {
 	background-color: #fff;
 }
 
-.service,
-.employee {
-	padding: 10px 25px 10px 25px;
-}
-
 .service-title, 
 .latest-news-area .entry-title {
 	margin: 0;
@@ -2132,13 +2176,20 @@ input[type="submit"] {
 .panel.widget .widget-title,
 .so-panel.widget .widget-title {
 	position: relative;
-	margin-bottom: 0px;
+	margin-bottom: 20px;
 	padding: 0;
 	border-bottom: 0;
 	text-align: center;
-	font-size: 56px;
+	font-size: 40px;
 	text-transform: uppercase;
 }
+@media (min-width: 499px) {
+	.panel.widget .widget-title,
+	.so-panel.widget .widget-title {
+		font-size: 56px;
+	}
+}
+
 .panel.widget .widget-title:after, 
 .so-panel.widget .widget-title:after {
 	position: inherit;
@@ -2154,7 +2205,24 @@ input[type="submit"] {
 	padding: 20px 30px
 }
 
+/* Services */
+
+.service {
+	padding: 10px;
+}
+
+.service-icon{
+	width: 120px;
+	height: 120px;
+}
+
 /* Employees */
+
+.employee {
+	padding: 10px 25px 10px 25px;
+}
+
+
 .employee-name{
 	margin: 0;
 	padding: 15px 0 0 0;
@@ -2191,6 +2259,14 @@ input[type="submit"] {
 	padding: 0px !important;
 }
 
+#GrupoEscola .siteorigin-widget-tinymce.textwidget{
+	height: 20px;
+}
+
+GrupoEscolaConteudo .employee {
+	padding: 10px;
+}
+
 #GrupoEscolaConteudo{
 	margin-top: -50px;
 }
@@ -2209,7 +2285,6 @@ input[type="submit"] {
 	/* margin-top: -40px; */
 }
 
-
 @media (min-width: 992px) {
 	.page-template-page_services-php .service.col-md-4,
 	.page-template-page_employees-php .employee.col-md-4,
@@ -2226,7 +2301,7 @@ input[type="submit"] {
 	}
 	
 	#GrupoEscolaConteudo .employees-area .col-md-4{
-		width: 48%;
+		width: 32%;
 	}
 	
 	#GrupoEscolaConteudo .panel-grid-cell .widget-title{
@@ -2241,8 +2316,35 @@ input[type="submit"] {
 	}
 }
 
+/* Parceiros */
+
+/* .ParceirosGaleria .envira-gallery-image{
+	padding: 10px;
+}
+
+.ParceirosGaleria .envira-gallery-wrap{
+	width: 455px;
+    margin: 0 auto 20px auto;
+} */
+
+.GaleriaParceiros img{
+	width: 200px;
+	height: 200px;
+}
+
+.GaleriaParceiros .envira-lazy{
+	height: 200px;
+}
+
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1000px; /*1170*/
   }
+}
+
+/****** TEMPORÁRIO ****/
+
+#pgc-63-1-0 .employees-area{
+	display: none;
 }
