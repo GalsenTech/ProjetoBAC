@@ -117,7 +117,7 @@ class Moesia_Services extends WP_Widget {
 					<?php $link = get_post_meta( get_the_ID(), 'wpcf-service-link', true ); ?>
 					<div class="service col-md-3 col-sm-6 col-xs-6">
 						<?php if ($icon) : ?>
-							<?php $icon_html = '<span class="service-icon wow zoomInDown" style="background-image:url(' . esc_html($icon) . '); background-size: cover; background-position:center;">' . '</span>'; ?>
+							<?php $icon_html = '<a href="' . esc_url($link) . '" class="service-icon wow zoomInDown" style="background-image:url(' . esc_html($icon) . '); background-size: cover; background-position:center;">' . '</a>'; ?>
 							<?php echo apply_filters( 'services_widget_icon', $icon_html ); ?>
 						<?php endif; ?>
 						<?php $content_html = '<h4 class="service-title wow fadeInUp">';
